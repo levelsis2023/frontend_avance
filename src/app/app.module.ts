@@ -9,6 +9,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { DashboardComponent } from './pages/modules/dashboard/dashboard.component';
+import { DependenciasComponent } from './pages/modules/dependencias/dependencias.component';
+
+import { FormGroup, FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DependeciasHijasComponent } from './pages/modules/dependecias-hijas/dependecias-hijas.component';
+import { AreasHijasComponent } from './pages/modules/areas-hijas/areas-hijas.component';
+import { AreasComponent } from './pages/modules/areas/areas.component';
+
 
 @NgModule({
   declarations: [
@@ -18,11 +26,19 @@ import { DashboardComponent } from './pages/modules/dashboard/dashboard.componen
     HeaderComponent,
     MenuComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    DependenciasComponent,
+    DependeciasHijasComponent,
+    AreasHijasComponent,
+    AreasComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
